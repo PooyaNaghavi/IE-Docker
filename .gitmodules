@@ -1,0 +1,6 @@
+[submodule "IE-Project1"]
+	path = IE-Project1
+	url = git@github.com:PooyaNaghavi/IE-Project1.git
+[submodule "IE-Project-React"]
+	path = IE-Project-React
+	url = git@github.com:PooyaNaghavi/IE-Project-React.git
