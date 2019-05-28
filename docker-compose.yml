@@ -8,6 +8,7 @@ services:
       - '3000:3000'
     environment:
       - NODE_ENV=development
+      - REACT_APP_BASE_URL=http://localhost:8080/ca3
     depends_on:
       - java_server
   java_server:
@@ -26,9 +27,9 @@ services:
     container_name: sql
     image: mysql:8.0.16
     volumes:
-      - /var/lib/mysql
+      - /home/m0hammad/Archive/uni/Term8/ie/IE-Docker/mysql:/var/lib/mysql
     ports:
-      - '3307:3306'
+      - '3306:3306'
     environment:
       - NODE_ENV=development
       - MYSQL_ROOT_PASSWORD=pass123
