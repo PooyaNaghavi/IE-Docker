@@ -21,13 +21,17 @@ services:
       - '8080:8080'
     environment:
       - NODE_ENV=development
+    restart: always
     depends_on:
+      - sql
+    links: 
       - sql
   sql:
     container_name: sql
-    image: mysql:8.0.16
+    image: mysql:8.0
     volumes:
       - /home/m0hammad/Archive/uni/Term8/ie/IE-Docker/mysql:/var/lib/mysql
+      - /home/m0hammad/Archive/uni/Term8/ie/IE-Docker/mysqld.cnf:/etc/mysql/mysql.conf.d/mysqld.cnf
     ports:
       - '3306:3306'
     environment:

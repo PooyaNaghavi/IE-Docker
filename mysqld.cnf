@@ -1,0 +1,5 @@
+[mysqld]
+datadir		            = /var/lib/mysql
+
+# Accept connections from any IP address
+bind-address	            = 0.0.0.0
